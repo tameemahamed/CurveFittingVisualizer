@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curve Fitting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Curve Fitting Visualizer</h1>
+
+        <!-- File Upload -->
+        <input type="file" id="csvFileInput" accept=".csv">
+        <div id="columnSelector" style="display: none;">
+            <label for="xColumn">X-Axis:</label>
+            <select id="xColumn"></select>
+            <label for="yColumn">Y-Axis:</label>
+            <select id="yColumn"></select>
+            <button id="loadData">Load Data</button>
+        </div>
+
+        <!-- Slider for Polynomial Degree -->
+        <div id="polynomialControls" style="display: none;">
+            <label for="polyDegree">Polynomial Degree:</label>
+            <input type="range" id="polyDegree" min="1" max="10" value="2">
+            <span id="degreeValue">2</span>
+        </div>
+
+        <!-- Chart Container -->
+        <canvas id="chartCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.5.2/math.min.js"></script>
+
+</body>
+</html>
