@@ -167,3 +167,15 @@ document.getElementById("polyDegree").addEventListener("input", e => {
         },
     ]);
 });
+
+// Download sample CSV on button click
+document.getElementById("downloadSample").addEventListener("click", () => {
+    const link = document.createElement('a');
+    link.href = '/TestData/happiness score 2015.csv';
+    // This sets the filename that the user will see
+    link.download = 'happiness score 2015.csv';
+    // Append, click, and cleanup
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
